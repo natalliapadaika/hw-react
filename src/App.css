@@ -1,0 +1,27 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+button{
+  margin-left: 15px;
+}
+input{
+  margin-right: 10px;
+  width: 200px;
+  height: 20px;
+}
+.App-main-todolist{
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.App-main-todolist-t{
+  width: 200px;
+  border: 2px solid  rgba(255, 255, 255, 0.87);
+  border-radius: 2px;
+  margin-bottom: 5px;
+  padding: 1px 2px;
+}
+
