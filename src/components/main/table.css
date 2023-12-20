@@ -1,0 +1,12 @@
+
+table{
+    border: 1px solid #1e1c1c;
+}
+thead{
+    border: 1px solid #1f1e1e;
+    font-weight: 500;
+}
+
+td{
+    border: 1px solid #1f1e1e;
+}
