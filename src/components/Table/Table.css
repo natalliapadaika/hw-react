@@ -1,0 +1,9 @@
+.table{
+    width: 100vh;
+    /* border: 1px solid white; */
+
+}
+td, th{
+    text-align: center;
+    border: 1px solid white;
+}
