@@ -1,0 +1,10 @@
+
+form{
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+button{
+    cursor: pointer;
+    border: 1px solid transparent;
+}
