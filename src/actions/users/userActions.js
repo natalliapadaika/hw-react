@@ -29,9 +29,9 @@ payload: user
         try{
             const {data} = await axios.get(apiUrl)
 
-            setTimeout(() =>{
+            
                 dispatch(setUserSaccess(data))
-            }, 1000)
+           
         } catch (error) {
             dispatch(setUserFailure(error.message))
         }

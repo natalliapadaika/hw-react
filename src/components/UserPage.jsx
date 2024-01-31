@@ -9,12 +9,16 @@ import { Comments } from "./Comments";
 
 export const UserPage = () => {
   const dispatch = useDispatch();
-  const { loading, error, user } = useSelector((state) => state.user);
+ 
   const { id } = useParams();
 
   useEffect(() => {
     dispatch(setUser(id));
   }, []);
+
+ const { loading, error, user } = useSelector((state) => state.user);
+ 
+
 
   if (error) {
     return (
@@ -24,27 +28,33 @@ export const UserPage = () => {
     );
   }
 
+  if(loading) {
+    return (
+       <h1>Данные загружаются</h1>
+    )
+
+  };
+
+if (!loading && user.address) {
   return (
     <>
-      {loading ? (
-        <h1>Подождите, данные загружаются</h1>
-      ) : (
-        <div className="infoOfUser">
+    <div className="infoOfUser">
           <div className="user">
             <h1>Пользователь:</h1>
 
             <h2>Имя: {user.name}</h2>
             <h3>Ник: {user.username}</h3>
             <p>Тел: {user.phone}</p>
-            {/* <p>Адресс: {user.address.city}, {user.address.street}</p> */}
+            <p>Адресс: {user.address.city}, {user.address.street}</p>     
             <div className="comment">
               <Comments />
             </div>
           </div>
-        </div>
-      )}
+        </div>   
+        
+         <Link to="/users">Users</Link>
+        </>  )
+      };
 
-      <Link to="/users">Users</Link>
-    </>
-  );
+   
 };
